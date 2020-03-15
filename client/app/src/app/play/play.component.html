@@ -1,0 +1,25 @@
+<mat-toolbar id="toolbar">
+    <span>Line Up 4</span>
+    <div>
+        <mat-icon style="color: rgb(102, 255, 153)">person</mat-icon>
+        {{firstPlayer ? "You" : opponentId }}
+    </div>
+    <div>
+        <mat-icon style="color: rgb(153, 102, 255)">person</mat-icon>
+        {{firstPlayer ? opponentId : "You" }}
+    </div>
+</mat-toolbar>
+<div id="container">
+    <p>{{status}}</p>
+    <div id="board">
+        <div *ngFor="let circle of circles" class="circle" id="{{circle}}"></div>
+    </div>
+    <button *ngIf="status != StatusString.LOSER && status != StatusString.WINNER" mat-raised-button
+        (click)="showInstructions()">
+        <mat-icon>help_outline</mat-icon> Help
+    </button>
+    <button *ngIf="status == StatusString.LOSER || status == StatusString.WINNER" mat-raised-button color="warn"
+        routerLink="/">
+        <mat-icon>home</mat-icon> Home
+    </button>
+</div>

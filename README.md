@@ -1,0 +1,36 @@
+# line-up-4
+
+A 2-player game based on `express` (server) and `angular` (client), communicating via `socket.io`. Both clients handle data processing and render the board independently, using the server to communicate with each other (no anti-cheating techniques are applied). A new ID is issued to each player to play a new game. Use `npm start` to run the app locally. 
+
+The following commands have been used to build the app skeleton:
+
+* Client
+```
+npm install -g @angular/cli
+ng new app
+cd app
+rm -rf .git
+ng generate component dashboard
+ng generate component home
+ng generate component play
+ng generate component wait
+ng generate service http
+ng add @angular/material
+ng build
+ng serve --open
+```
+* Server
+```
+npm init --yes
+npm install body-parser
+npm install dotenv
+npm install express
+npm install socket.io
+npm start
+```
+
+Create a `.env` text file in the `server` folder with the following lines:
+
+```
+PORT = 3000
+```

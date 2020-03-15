@@ -1,0 +1,23 @@
+#container {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    text-align: center;
+}
+  
+#container > h1 {
+    animation: color-animation 5s infinite;
+}
+ 
+@keyframes color-animation {
+    0% {
+        color: rgb(102, 255, 153);
+    }
+    50% {
+        color: rgb(153, 102, 255);
+    }
+    100% {
+        color: rgb(102, 255, 153);
+    }
+}

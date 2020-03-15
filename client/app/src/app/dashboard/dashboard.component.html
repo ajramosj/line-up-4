@@ -1,0 +1,39 @@
+<mat-toolbar id="toolbar">
+    <span>Line Up 4</span>
+    <div>
+        <mat-icon style="color: rgb(255, 153, 51)">assignment_ind</mat-icon>
+        {{id}}
+    </div>
+</mat-toolbar>
+<div id="container">
+    <p>Invite a friend or wait for someone who invites you to play</p>
+    <mat-accordion>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon>track_changes</mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>Wait for an invitation</mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>We will prepare the new game with someone who invites you.</p>
+            <br />
+            <button mat-raised-button color="accent" (click)="requestGame(false)">Wait</button>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon>people</mat-icon>
+                </mat-panel-title>
+                <mat-panel-description>Invite a friend</mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>You must know the ID of your friend to invite them. Alternatively, you can wait until someone invites you
+                in the above panel.</p>
+            <mat-form-field>
+                <mat-label>Player ID (<mat-icon style="color: rgb(255, 153, 51)">assignment_ind</mat-icon>)</mat-label>
+                <input id="opponent-id" matInput type="number" min="1">
+            </mat-form-field>
+            <br />
+            <button mat-raised-button color="primary" (click)="requestGame(true)">Invite</button>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

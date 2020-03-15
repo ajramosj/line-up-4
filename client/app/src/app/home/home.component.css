@@ -1,0 +1,38 @@
+#container {
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgb(102, 255, 153), rgb(153, 102, 255));
+    background-size: 200% 200%;
+    background-repeat: no-repeat;
+    animation: gradient-animation 10s infinite;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#start-button {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255, 0.2);
+    margin: auto;
+    font-size: 40px;
+}
+
+#start-button img {
+    height: 100px;
+}
+
+#title {
+    font-size: 15vw;
+    line-height: normal;
+    color: white;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+}

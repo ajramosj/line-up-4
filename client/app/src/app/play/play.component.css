@@ -1,0 +1,55 @@
+#toolbar > span {
+    margin-right: 1em;
+}
+
+#toolbar > div {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 5px;
+}
+
+#toolbar > div > * {
+    vertical-align: text-top;
+}
+
+#container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+#board {
+    height: 85vw;
+    max-height: 600px;
+    margin: auto 2%;
+    padding: 2%;
+    border-radius: 2%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: rgb(255, 153, 51);
+}
+
+.circle {
+    background-color: white;
+    border-radius: 50%;
+    height: 90%;
+    width: 90%;
+    margin: 5%;
+}
+
+.circle:hover {
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+button {
+    margin: 10px;
+}
+
+p {
+    text-align: center;
+    margin: 10px;
+}
