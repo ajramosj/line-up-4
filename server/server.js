@@ -30,8 +30,8 @@ app.post("/opponent", async (req, res) => {
 });
 
 // App
-app.use(express.static('../client/app/dist/app'));
-app.get('/', (req, res) => res.sendFile(path.resolve('../client/app/dist/app/index.html')));
+app.use(express.static('dist/app'));
+app.get('/', (req, res) => res.sendFile(path.resolve('dist/app/index.html')));
 
 /* Server */
 

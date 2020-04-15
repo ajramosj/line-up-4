@@ -35,6 +35,7 @@ Create a `.env` text file in the `server` with the port number (e.g., `PORT = 30
 cd app
 npm install
 ng build
+mv dist ../../server
 cd ../../server
 npm install --only=prod
 npm start 
